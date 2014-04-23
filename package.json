@@ -1,0 +1,21 @@
+{
+    "name": "parport2",
+    "description": "Low-level Node.JS interface to parallel ports.",
+    "version": "0.1.0",
+    "keyword": ["parallel", "port"],
+    "author":  "Wolfgang Hackenberg <wolfih@gmx.de>",
+    "maintainers": [ "Wolfgang Hackenberg <wolfih@gmx.de>" ],
+    "main": "./build/Release/parport2",
+    "engines": { "node": ">= 0.6" },
+    "directories": {
+        "bin": "./bin", 
+        "src": "./src",
+        "doc": "./doc", 
+        "example": "./examples"
+    },
+    "licenses": [ {
+        "type": "GPL",
+        "version": "3",
+        "url": "http://www.gnu.org/licenses/gpl-3.0.txt"
+    } ]
+}
