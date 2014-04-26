@@ -1,5 +1,5 @@
 /*
- * Author: Wolfgang Hackenberg <wolfih@gmx.de>
+ * Author: Wolfgang Hackenberg <whackenb@gmail.com>
  *
  * API adopted from Matheus Neder's parallel-port:
  * https://code.google.com/p/parallel-port/
