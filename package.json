@@ -3,8 +3,8 @@
     "description": "Low-level Node.JS interface to parallel ports.",
     "version": "0.1.0",
     "keyword": ["parallel", "port"],
-    "author":  "Wolfgang Hackenberg <wolfih@gmx.de>",
-    "maintainers": [ "Wolfgang Hackenberg <wolfih@gmx.de>" ],
+    "author":  "Wolfgang Hackenberg <whackenb@gmail.com>",
+    "maintainers": [ "Wolfgang Hackenberg <whackenb@gmail.com>" ],
     "main": "./build/Release/parport2",
     "engines": { "node": ">= 0.6" },
     "directories": {
