@@ -1,7 +1,5 @@
 
-Draft for readme, addon is not released, npm installation will not work. :)
 
-To install / rebuild run "npm install" in root dir of parport2.
 
  - Wolfgang Hackenberg
 
