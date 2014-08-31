@@ -41,37 +41,37 @@ public:
   }
 
   //Constructor
-  V8_CTOR(ParportWrap) {
+  V8_CTOR() {
     short portid = 0;
-    if (args.Length() >= 1)
-      portid = v8u::Int(args[0]);
+    if (info.Length() >= 1)
+      portid = v8u::Int(info[0]);
 
     V8_WRAP(new ParportWrap(portid));
   } V8_CTOR_END()
 
   //Read methods
   static V8_CB(ReadData) {
-    ParportWrap* inst = Unwrap(args.This());
+    ParportWrap* inst = Unwrap(info.This());
     V8_RET(v8u::Int(inst->port.readData()));
   } V8_CB_END()
   static V8_CB(ReadControl) {
-    ParportWrap* inst = Unwrap(args.This());
+    ParportWrap* inst = Unwrap(info.This());
     V8_RET(v8u::Int(inst->port.readControl()));
   } V8_CB_END()
   static V8_CB(ReadStatus) {
-    ParportWrap* inst = Unwrap(args.This());
+    ParportWrap* inst = Unwrap(info.This());
     V8_RET(v8u::Int(inst->port.readStatus()));
   } V8_CB_END()
 
   //Write methods
   static V8_CB(WriteData) {
-    ParportWrap* inst = Unwrap(args.This());
-    inst->port.writeData(v8u::Int(args[0]));
+    ParportWrap* inst = Unwrap(info.This());
+    inst->port.writeData(v8u::Int(info[0]));
     V8_RET(v8::Undefined());
   } V8_CB_END()
   static V8_CB(WriteControl) {
-    ParportWrap* inst = Unwrap(args.This());
-    inst->port.writeControl(v8u::Int(args[0]));
+    ParportWrap* inst = Unwrap(info.This());
+    inst->port.writeControl(v8u::Int(info[0]));
     V8_RET(v8::Undefined());
   } V8_CB_END()
   //static V8_CB(WriteStatus) {
@@ -80,14 +80,10 @@ public:
   //  V8_RET(v8::Undefined());
   //} V8_CB_END()
 
-  //Getters
-  V8_GET(GetId) {
-    ParportWrap* inst = Unwrap(info.Holder());
-    V8_RET(v8u::Int(inst->ptid));
-  } V8_GET_END()
+
 
   //TYPE DEFINITION
-  NODE_TYPE(ParportWrap, "Port") {
+  NODE_TYPE(ParportWrap, "ParportWrap") {
     V8_DEF_CB("readData", ReadData);
     V8_DEF_CB("readStatus", ReadStatus);
     V8_DEF_CB("readControl", ReadControl);
@@ -95,7 +91,6 @@ public:
     //V8_DEF_CB("writeStatus", WriteStatus);
     V8_DEF_CB("writeControl", WriteControl);
 
-    V8_DEF_GET("id", GetId);
   } NODE_TYPE_END()
 private:
   ParallelPort port;
@@ -114,6 +109,6 @@ NODE_DEF_MAIN() {
 
   // The Parport class
   ParportWrap::init(target);
-} NODE_DEF_MAIN_END(parport)
+} NODE_DEF_MAIN_END(parport2)
 
 };
