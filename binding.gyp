@@ -2,7 +2,7 @@
   "targets": [
     {
       "target_name": "parport2",
-      "sources": [ "src/addon.cc" ],
+      "sources": [ "src/binding.cc" ],
       'cflags!': [ '-fno-exceptions' ],
       'cflags_cc!': [ '-fno-exceptions' ],
       "includes": [
